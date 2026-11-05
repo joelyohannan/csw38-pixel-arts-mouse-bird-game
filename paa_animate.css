@@ -1,0 +1,11 @@
+/* Retain the original navigation hover effect; the character sprites are replaced by the game. */
+nav#gameLinks a {
+  position: relative; color: white; transition: color .5s;
+}
+nav#gameLinks a:hover { color: rgb(255, 194, 99); }
+nav#gameLinks a::after {
+  content: ""; position: absolute; top: 100%; left: 0; width: 0; height: 8px;
+  background: linear-gradient(to right, rgb(237, 243, 71), rgb(188, 74, 0));
+  border-radius: 4px; opacity: 0; transition: opacity .5s, width .5s;
+}
+nav#gameLinks a:hover::after { opacity: 1; width: 100%; }
